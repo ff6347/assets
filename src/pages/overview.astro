@@ -1,38 +1,33 @@
 ---
-import fs from 'node:fs'
+import fs from 'node:fs';
 // import {Image} from 'astro:assets'
-import { dirname, resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
-import DefaultLayout from "../layouts/Default.astro"
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import DefaultLayout from '../layouts/Default.astro';
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-const imagesPath = resolve(__dirname, '../../public/images/')
-const files = fs.readdirSync(imagesPath)
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const imagesPath = resolve(__dirname, '../../public/images/');
+const files = fs.readdirSync(imagesPath);
 
 type ImageInfo = {
 	name: string;
 	url: string;
-}
+};
 const imageInfos: ImageInfo[] = files.map((file: string) => {
 	return {
 		name: file,
-		url: `${Astro.url.origin}/images/${file}`
-	}
+		url: `${Astro.url.origin}/images/${file}`,
+	};
 });
-
-
-
 ---
+
 <style>
-
-body
-{
-
-	height: 100svh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+	body {
+		height: 100svh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	main {
 		max-width: 300px;
 		margin: 0 auto;
@@ -41,14 +36,12 @@ body
 		display: flex;
 		flex-direction: row;
 		align-items: start;
-
 	}
 	figcaption {
 		font-size: 0.8rem;
 		margin-left: auto;
 		display: flex;
 		gap: 0.5rem;
-
 	}
 	figure img {
 		max-width: 100%;
@@ -80,35 +73,34 @@ body
 </style>
 <DefaultLayout title="Assets">
 	<main>
-
-
-
 		<ul class="images">
-			{imageInfos.map(({name, url}) => (
-				<li>
-				<figure>
-					<div class="image-wrapper">
-				<img src={`/images/${name}`} alt={name} />
-					</div>
-				<figcaption>
-					<input type="text" name="" id={name} value={url}> <button data-image-url={url}>copy</button>
-
-				</figcaption>
-				</figure>
-			</li>
-		))}
+			{
+				imageInfos.map(({ name, url }) => (
+					<li>
+						<figure>
+							<div class="image-wrapper">
+								<img src={`/images/${name}`} alt={name} />
+							</div>
+							<figcaption>
+								<input type="text" name="" id={name} value={url} />{' '}
+								<button data-image-url={url}>copy</button>
+							</figcaption>
+						</figure>
+					</li>
+				))
+			}
 		</ul>
 	</main>
 	<script is:inline>
-		console.log('Hello from inline script')
-		const buttons = document.querySelectorAll("figcaption > button");
-		if(!buttons) throw new Error('No inputs found');
+		console.log('Hello from inline script');
+		const buttons = document.querySelectorAll('figcaption > button');
+		if (!buttons) throw new Error('No inputs found');
 		buttons.forEach((button) => {
-			button.addEventListener("click", () => {
+			button.addEventListener('click', () => {
 				navigator.clipboard.writeText(button.getAttribute('data-image-url'));
-				setTimeout(handler => {
+				setTimeout(() => {
 					button.textContent = 'copied';
-					setTimeout(handler => {
+					setTimeout(() => {
 						button.textContent = 'copy';
 					}, 1000);
 				}, 10);

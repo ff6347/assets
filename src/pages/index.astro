@@ -1,123 +1,122 @@
 ---
-import Default from "../layouts/Default.astro"
+// import Default from "../layouts/Default.astro"
 ---
 
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-	<title>assets</title>
-	<style>
-		/*
+		<title>assets</title>
+		<style>
+			/*
   1. Use a more-intuitive box-sizing model.
 */
-		*,
-		*::before,
-		*::after {
-			box-sizing: border-box;
-		}
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+			}
 
-		/*
+			/*
   2. Remove default margin
 */
-		* {
-			margin: 0;
-		}
+			* {
+				margin: 0;
+			}
 
-		/*
+			/*
   3. Allow percentage-based heights in the application
 */
-		html,
-		body {
-			height: 100%;
-		}
+			html,
+			body {
+				height: 100%;
+			}
 
-		/*
+			/*
   Typographic tweaks!
   4. Add accessible line-height
   5. Improve text rendering
 */
-		body {
-			line-height: 1.5;
-			-webkit-font-smoothing: antialiased;
-		}
+			body {
+				line-height: 1.5;
+				-webkit-font-smoothing: antialiased;
+			}
 
-		/*
+			/*
   6. Improve media defaults
 */
-		img,
-		picture,
-		video,
-		canvas,
-		svg {
-			display: block;
-			max-width: 100%;
-		}
+			img,
+			picture,
+			video,
+			canvas,
+			svg {
+				display: block;
+				max-width: 100%;
+			}
 
-		/*
+			/*
   7. Remove built-in form typography styles
 */
-		input,
-		button,
-		textarea,
-		select {
-			font: inherit;
-		}
+			input,
+			button,
+			textarea,
+			select {
+				font: inherit;
+			}
 
-		/*
+			/*
   8. Avoid text overflows
 */
-		p,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			overflow-wrap: break-word;
-		}
+			p,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				overflow-wrap: break-word;
+			}
 
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans',
+					source-sans-pro, sans-serif;
+				font-weight: normal;
+			}
 
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
-			font-weight: normal;
-		}
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				margin: 0 auto;
+				flex-direction: column;
+				background-image: url('images/striped-tile@2x.png');
+				background-size: 25px 25px;
+			}
 
-		body {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 100vh;
-			margin: 0 auto;
-			flex-direction: column;
-			background-image: url("images/striped-tile@2x.png");
-			background-size:  25px 25px;
-		}
+			h1 {
+				font-size: 2rem;
+				text-align: center;
+				background-color: white;
+			}
+			p {
+				font-size: 1rem;
+				text-align: center;
+				background-color: white;
+			}
+		</style>
+	</head>
 
-		h1 {
-			font-size: 2rem;
-			text-align: center;
-			background-color: white;
-		}
-		p {
-			font-size: 1rem;
-			text-align: center;
-			background-color: white;
-		}
-	</style>
-</head>
-
-<body>
-	<h1>Assets
-	</h1>
-	<p>
-		used &commat; hbkbs digicom 24/25 <a href="/overview">&rarrw; /overview</a>
-	</p>
-</body>
+	<body>
+		<h1>Assets</h1>
+		<p>
+			used &commat; hbkbs digicom 24/25 <a href="/overview">&rarrw; /overview</a
+			>
+		</p>
+	</body>
 </html>

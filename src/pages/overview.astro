@@ -79,6 +79,9 @@ const imageInfos: ImageInfo[] = files.map((file: string) => {
 		cursor: pointer;
 		width: 80px;
 	}
+	button:hover {
+		background-color: #0056b3;
+	}
 	.image-wrapper {
 		/* width: 100px; */
 		overflow: hidden;
@@ -155,6 +158,13 @@ const imageInfos: ImageInfo[] = files.map((file: string) => {
 								button.textContent = 'copy';
 							}, 1000);
 						}, 10);
+					});
+
+					button.addEventListener('mouseover', () => {
+						button.textContent = 'click!';
+					});
+					button.addEventListener('mouseout', () => {
+						button.textContent = 'copy';
 					});
 				});
 

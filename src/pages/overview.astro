@@ -16,7 +16,7 @@ type ImageInfo = {
 const imageInfos: ImageInfo[] = files.map((file: string) => {
 	return {
 		name: file,
-		url: `${Astro.url.origin}/images/${file}`,
+		url: `/images/${file}`,
 	};
 });
 ---
@@ -56,6 +56,9 @@ const imageInfos: ImageInfo[] = files.map((file: string) => {
 	input {
 		width: 100%;
 		margin-left: auto;
+		border-radius: 0;
+		border: 1px solid #007bff;
+		padding: 0.5rem;
 	}
 	button {
 		background-color: #007bff;
@@ -82,7 +85,13 @@ const imageInfos: ImageInfo[] = files.map((file: string) => {
 								<img src={`/images/${name}`} alt={name} />
 							</div>
 							<figcaption>
-								<input type="text" name="" id={name} value={url} />{' '}
+								<input
+									type="text"
+									name=""
+									id={name}
+									value={url}
+									autocomplete="off"
+								/>{' '}
 								<button data-image-url={url}>copy</button>
 							</figcaption>
 						</figure>
@@ -92,18 +101,42 @@ const imageInfos: ImageInfo[] = files.map((file: string) => {
 		</ul>
 	</main>
 	<script is:inline>
-		console.log('Hello from inline script');
-		const buttons = document.querySelectorAll('figcaption > button');
-		if (!buttons) throw new Error('No inputs found');
-		buttons.forEach((button) => {
-			button.addEventListener('click', () => {
-				navigator.clipboard.writeText(button.getAttribute('data-image-url'));
-				setTimeout(() => {
-					button.textContent = 'copied';
-					setTimeout(() => {
-						button.textContent = 'copy';
-					}, 1000);
-				}, 10);
+		document.addEventListener('DOMContentLoaded', () => {
+			console.log('Hello from inline script');
+			const host = window.location.host;
+			const protocol = window.location.protocol;
+
+			const figcaptions = document.querySelectorAll('figcaption');
+			if (!figcaptions) throw new Error('No figcaptions found');
+			figcaptions.forEach((figcaption) => {
+				const buttons = figcaption.querySelectorAll('button');
+				if (!buttons) throw new Error('No buttons found');
+				buttons.forEach((button) => {
+					const url = button.getAttribute('data-image-url');
+					button.setAttribute('data-image-url', `${protocol}//${host}${url}`);
+					button.addEventListener('click', () => {
+						navigator.clipboard.writeText(
+							button.getAttribute('data-image-url'),
+						);
+						setTimeout(() => {
+							button.textContent = 'copied';
+							setTimeout(() => {
+								button.textContent = 'copy';
+							}, 1000);
+						}, 10);
+					});
+				});
+
+				const input = figcaption.querySelector('input');
+				if (!input) throw new Error('No input found');
+				const url = input.value;
+				input.value = `${protocol}//${host}${url}`;
+
+				input.addEventListener('click', () => {
+					input.select();
+
+					navigator.clipboard.writeText(input.value);
+				});
 			});
 		});
 	</script>

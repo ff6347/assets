@@ -1,0 +1,174 @@
+---
+import fs from 'node:fs';
+// import {Image} from 'astro:assets'
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import DefaultLayout from '../layouts/Default.astro';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const imagesPath = resolve(__dirname, '../../public/images/');
+const files = fs.readdirSync(imagesPath);
+
+type ImageInfo = {
+	name: string;
+	url: string;
+};
+const imageInfos: ImageInfo[] = files.map((file: string) => {
+	return {
+		name: file,
+		url: `/images/${file}`,
+	};
+});
+---
+
+<style>
+	body {
+		height: 100svh;
+	}
+	main {
+		margin: 0 auto;
+		max-width: 95svw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.images {
+		/* margin: 1rem; */
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(95svw, 1fr));
+
+		gap: 1rem;
+		align-items: end;
+	}
+	figure {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 0.5rem;
+		height: 100%;
+		/* border-top: 1px solid #007bff; */
+		padding-top: 1rem;
+	}
+	figcaption {
+		width: 100%;
+		/* margin-top: auto; */
+		font-size: 0.8rem;
+		/* margin-left: auto; */
+		display: flex;
+		/* gap: 0.5rem; */
+		justify-content: space-between;
+	}
+	figure img {
+		max-width: 100%;
+	}
+	.item {
+		margin-bottom: 1rem;
+	}
+	input {
+		width: 100%;
+		/* margin-left: auto; */
+		border-radius: 0;
+		border: 1px solid #007bff;
+		padding: 0.5rem;
+	}
+	button {
+		background-color: #007bff;
+		color: white;
+		border: none;
+		padding: 0.5rem;
+		cursor: pointer;
+		width: 80px;
+	}
+	.image-wrapper {
+		/* width: 100px; */
+		overflow: hidden;
+	}
+	@media screen and (min-width: 400px) {
+		main {
+			/* margin: 0 auto; */
+			/* max-width: 100%; */
+			display: inherit;
+		}
+		.images {
+			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		}
+	}
+	@media screen and (min-width: 800px) {
+		.images {
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		main {
+			max-width: 70svw;
+			height: 100%;
+			/* display: flex; */
+		}
+	}
+</style>
+<DefaultLayout title="Assets">
+	<main>
+		<section class="images">
+			{
+				imageInfos.map(({ name, url }) => (
+					<div class="item">
+						<figure>
+							<div class="image-wrapper">
+								<img src={`/images/${name}`} alt={name} />
+							</div>
+							<figcaption>
+								<input
+									type="text"
+									name=""
+									id={name}
+									value={url}
+									autocomplete="off"
+								/>{' '}
+								<button data-image-url={url}>copy</button>
+							</figcaption>
+						</figure>
+					</div>
+				))
+			}
+		</section>
+	</main>
+	<script is:inline>
+		document.addEventListener('DOMContentLoaded', () => {
+			console.log('Hello from inline script');
+			const host = window.location.host;
+			const protocol = window.location.protocol;
+
+			const figcaptions = document.querySelectorAll('figcaption');
+			if (!figcaptions) throw new Error('No figcaptions found');
+			figcaptions.forEach((figcaption) => {
+				const buttons = figcaption.querySelectorAll('button');
+				if (!buttons) throw new Error('No buttons found');
+				buttons.forEach((button) => {
+					const url = button.getAttribute('data-image-url');
+					button.setAttribute('data-image-url', `${protocol}//${host}${url}`);
+					button.addEventListener('click', () => {
+						navigator.clipboard.writeText(
+							button.getAttribute('data-image-url'),
+						);
+						setTimeout(() => {
+							button.textContent = 'copied';
+							setTimeout(() => {
+								button.textContent = 'copy';
+							}, 1000);
+						}, 10);
+					});
+				});
+
+				const input = figcaption.querySelector('input');
+				if (!input) throw new Error('No input found');
+				const url = input.value;
+				input.value = `${protocol}//${host}${url}`;
+
+				input.addEventListener('click', () => {
+					input.select();
+
+					navigator.clipboard.writeText(input.value);
+				});
+			});
+		});
+	</script>
+</DefaultLayout>

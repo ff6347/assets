@@ -1,0 +1,28 @@
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 120%;
+}
+body {
+	/* or other fonts https://modernfontstacks.com/ */
+	font-family: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
+		source-sans-pro, sans-serif;
+	font-weight: normal;
+	line-height: 1.5;
+	color: #333;
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 0;
+}
+
+pre {
+	font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+		"DejaVu Sans Mono", monospace;
+	font-weight: normal;
+	font-size: 0.89rem;
+	line-height: 1.5;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}

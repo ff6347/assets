@@ -1,9 +1,8 @@
 ---
 import Layout from "../layouts/Blank.astro";
+import "../../public/css/reset.css";
+import "../../public/css/base.css";
 ---
-
-<link rel="stylesheet" href="/css/reset.css" />
-<link rel="stylesheet" href="/css/base.css" />
 
 <Layout title="Test">
 	<h1>Test h1</h1>
@@ -19,3 +18,17 @@ import Layout from "../layouts/Blank.astro";
 	eum libero accusamus nam quisquam dicta nisi iure aperiam magni earum ea
 	dolor, cumque architecto corporis corrupti itaque illo!
 </p>
+
+<pre>
+	<code>
+{`function fibonacci(n) {
+    if (n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+// Generate the first 10 Fibonacci numbers
+for (let i = 0; i < 10; i++) {
+    console.log(fibonacci(i));
+}`}
+	</code>
+</pre>

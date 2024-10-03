@@ -13,85 +13,12 @@
 			name="description"
 			content="A collection of assets used in basics of digitial communication at hbk bs - codepen.io does not allow upload without a pro account"
 		/>
+		<meta name="color-scheme" content="light" />
+		<meta name="keywords" content="assets, hbk bs, digicom, 24/25" />
+		<meta name="author" content="Fabian ff6347 Morón Zirfas" />
+		<link rel="stylesheet" href="/css/reset.css" />
+		<link rel="stylesheet" href="/css/base.css" />
 		<style>
-			/*
-  1. Use a more-intuitive box-sizing model.
-*/
-			*,
-			*::before,
-			*::after {
-				box-sizing: border-box;
-			}
-
-			/*
-  2. Remove default margin
-*/
-			* {
-				margin: 0;
-			}
-
-			/*
-  3. Allow percentage-based heights in the application
-*/
-			html,
-			body {
-				height: 100%;
-			}
-
-			/*
-  Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
-*/
-			body {
-				line-height: 1.5;
-				-webkit-font-smoothing: antialiased;
-			}
-
-			/*
-  6. Improve media defaults
-*/
-			img,
-			picture,
-			video,
-			canvas,
-			svg {
-				display: block;
-				max-width: 100%;
-			}
-
-			/*
-  7. Remove built-in form typography styles
-*/
-			input,
-			button,
-			textarea,
-			select {
-				font: inherit;
-			}
-
-			/*
-  8. Avoid text overflows
-*/
-			p,
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6 {
-				overflow-wrap: break-word;
-			}
-
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-				font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans',
-					source-sans-pro, sans-serif;
-				font-weight: normal;
-			}
-
 			body {
 				display: flex;
 				justify-content: center;
@@ -99,19 +26,35 @@
 				height: 100vh;
 				margin: 0 auto;
 				flex-direction: column;
-				background-image: url('images/striped-tile@2x.png');
+				background-image: url("images/striped-tile@2x.png");
 				background-size: 25px 25px;
 			}
 
 			h1 {
 				font-size: 2rem;
-				text-align: center;
 				background-color: white;
 			}
 			p {
-				font-size: 1rem;
 				text-align: center;
 				background-color: white;
+			}
+			#credits {
+				position: absolute;
+				width: max-content;
+				bottom: 10px;
+
+				right: 10px;
+
+				background-color: white;
+
+				margin: 0;
+				font-size: 0.6em;
+
+				p {
+					text-align: right;
+					margin: 0;
+					padding: 0;
+				}
 			}
 		</style>
 	</head>
@@ -122,5 +65,11 @@
 		<p>
 			<a href="./overview">&rarrw; overview</a>
 		</p>
+		<div id="credits">
+			<p>
+				built with ❤ by <a href="https://github.com/ff6347">ff6347</a>
+			</p>
+			<p>source @ <a href="https://github.com/ff6347/assets">github</a></p>
+		</div>
 	</body>
 </html>

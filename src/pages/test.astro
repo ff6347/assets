@@ -6,6 +6,140 @@ import "../../public/css/base.css";
 
 <Layout title="Test">
 	<article>
+		<style>
+			#colors {
+				display: grid;
+				grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+				gap: var(--s1);
+			}
+			.color-box-wrapper {
+				display: flex;
+				flex-direction: row;
+				font-size: 0.89em;
+				gap: var(--s1);
+			}
+			.color-box {
+				width: 100px;
+				height: 100px;
+				border: 1px solid var(--dark-color);
+				padding: var(--s1);
+			}
+		</style>
+		<section>
+			<h2>Colors</h2>
+			<div id="colors">
+				<div class="color-box-wrapper">
+					<div
+						class="color-box"
+						style="background-color: var(--primary-color); color: var(--text-color-light);"
+					>
+						<span>Primary </span>
+					</div>
+					<p>
+						<code>--primary-color</code>
+					</p>
+				</div>
+				<div class="color-box-wrapper">
+					<div
+						class="color-box"
+						style="background-color: var(--secondary-color); color: var(--text-color-light);"
+					>
+						<span>Secondary</span>
+					</div>
+					<p>
+						<code>--secondary-color</code>
+					</p>
+				</div>
+				<div class="color-box-wrapper">
+					<div
+						class="color-box"
+						style="background-color: var(--dark-color); color: var(--text-color-light);"
+					>
+						<span>Dark</span>
+					</div>
+					<p>
+						<code>--dark-color</code>
+					</p>
+				</div>
+				<div class="color-box-wrapper">
+					<div
+						class="color-box"
+						style="background-color: var(--light-color); color: var(--text-color);"
+					>
+						<span>Light</span>
+					</div>
+					<p>
+						<code>--light-color</code>
+					</p>
+				</div>
+				<div class="color-box-wrapper">
+					<div
+						class="color-box"
+						style="background-color: var(--highlight-color); color: var(--text-color-light);"
+					>
+						<span>Highlight</span>
+					</div>
+					<p>
+						<code>--highlight-color</code>
+					</p>
+				</div>
+				<div class="color-box-wrapper">
+					<div
+						class="color-box"
+						style="background-color: var(--code-background-color); color: var(--text-color);"
+					>
+						<span>Code Background</span>
+					</div>
+					<p>
+						<code>--code-background-color</code>
+					</p>
+				</div>
+				<div class="color-box-wrapper">
+					<div
+						class="color-box"
+						style="background-color: var(--link-color); color: var(--text-color-light);"
+					>
+						<span>Link</span>
+					</div>
+					<p>
+						<code>--link-color</code>
+					</p>
+				</div>
+				<div class="color-box-wrapper">
+					<div
+						class="color-box"
+						style="background-color: var(--link-hover-color); color: var(--text-color-light);"
+					>
+						<span>Link Hover</span>
+					</div>
+					<p>
+						<code>--link-hover-color</code>
+					</p>
+				</div>
+				<div class="color-box-wrapper">
+					<div
+						class="color-box"
+						style="background-color: var(--text-color); color: var(--text-color-light);"
+					>
+						<span>Text</span>
+					</div>
+					<p>
+						<code>--text-color</code>
+					</p>
+				</div>
+				<div class="color-box-wrapper">
+					<div
+						class="color-box"
+						style="background-color: var(--text-color-light); color: var(--text-color);"
+					>
+						<span>Text Light</span>
+					</div>
+					<p>
+						<code>--text-color-light</code>
+					</p>
+				</div>
+			</div>
+		</section>
 		<section>
 			<h1>Test h1</h1>
 			<p>
@@ -56,7 +190,25 @@ import "../../public/css/base.css";
 					>corrupti</code
 				> itaque illo!
 			</p>
-
+			<ul>
+				<li>Test li</li>
+				<li>Test li</li>
+				<li>Test li</li>
+				<li>
+					<ul>
+						<li>Test li</li>
+						<li>Test li</li>
+						<li>Test li</li>
+						<li>
+							<ul>
+								<li>Test li</li>
+								<li>Test li</li>
+								<li>Test li</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
 			<pre>
 			<code>
 {`function fibonacci(n) {

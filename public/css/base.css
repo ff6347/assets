@@ -69,7 +69,8 @@ article,
 section,
 p {
 	/* padding-top: var(--s1); */
-	padding-bottom: var(--s2);
+	/* padding-bottom: var(--s2); */
+	margin-bottom: var(--s2);
 }
 
 a {
@@ -91,6 +92,7 @@ pre {
 	padding: var(--s1);
 	border-left: var(--s1) solid var(--code-background-color);
 	background-color: white;
+	margin-bottom: var(--s2);
 }
 
 pre,

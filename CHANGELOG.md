@@ -1,3 +1,10 @@
+# [2.0.0-beta.3](https://github.com/ff6347/assets/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2024-10-03)
+
+
+### Features
+
+* Dog fooding ([c077dd5](https://github.com/ff6347/assets/commit/c077dd50710bd2510636423fd15cb481da37f9d3))
+
 # [2.0.0-beta.2](https://github.com/ff6347/assets/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2024-10-03)
 
 

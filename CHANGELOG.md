@@ -1,3 +1,11 @@
+# [2.0.0-beta.2](https://github.com/ff6347/assets/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2024-10-03)
+
+
+### Features
+
+* light text color ([22803c3](https://github.com/ff6347/assets/commit/22803c328364b18671a586700c77b693b0357808))
+* list indent and style ([521625e](https://github.com/ff6347/assets/commit/521625edbd7537f9057fd6de6f5474a24c235e6a))
+
 # [2.0.0-beta.1](https://github.com/ff6347/assets/compare/v1.0.0...v2.0.0-beta.1) (2024-10-03)
 
 

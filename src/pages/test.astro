@@ -5,60 +5,80 @@ import "../../public/css/base.css";
 ---
 
 <Layout title="Test">
-	<h1>Test h1</h1>
-	<p>
-		Test p lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
-		obcaecati iusto eum libero accusamus nam quisquam dicta nisi iure aperiam
-		magni earum ea dolor, cumque architecto corporis <code>corrupti</code> itaque
-		illo!
-	</p>
-	<h2>Test h2</h2>
-	<p>
-		Test p lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
-		obcaecati iusto eum libero accusamus nam quisquam dicta nisi iure aperiam
-		magni earum ea dolor, cumque architecto corporis <code>corrupti</code> itaque
-		illo!
-	</p>
-	<h3>Test h3</h3>
-	<p>
-		Test p lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
-		obcaecati iusto eum libero accusamus nam quisquam dicta nisi iure aperiam
-		magni earum ea dolor, cumque architecto corporis <code>corrupti</code> itaque
-		illo!
-	</p>
-	<h4>Test h4</h4>
-	<p>
-		Test p lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
-		obcaecati iusto eum libero accusamus nam quisquam dicta nisi iure aperiam
-		magni earum ea dolor, cumque architecto corporis <code>corrupti</code> itaque
-		illo!
-	</p>
-	<h5>Test h5</h5>
-	<p>
-		Test p lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
-		obcaecati iusto eum libero accusamus nam quisquam dicta nisi iure aperiam
-		magni earum ea dolor, cumque architecto corporis <code>corrupti</code> itaque
-		illo!
-	</p>
-	<h6>Test h6</h6>
-	<p>
-		Test p lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
-		obcaecati iusto eum libero accusamus nam quisquam dicta nisi iure aperiam
-		magni earum ea dolor, cumque architecto corporis <code>corrupti</code> itaque
-		illo!
-	</p>
+	<article>
+		<section>
+			<h1>Test h1</h1>
+			<p>
+				Test p lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
+				obcaecati iusto eum libero accusamus nam quisquam dicta nisi iure
+				aperiam magni earum ea dolor, <a href="#">cumque</a> architecto corporis
+				<code>corrupti</code> itaque illo!
+			</p>
+		</section>
+		<section>
+			<h2>Test h2</h2>
+			<p>
+				Test p lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
+				obcaecati iusto eum libero accusamus nam quisquam dicta nisi iure
+				aperiam magni earum ea dolor, cumque architecto corporis <code
+					>corrupti</code
+				> itaque illo!
+			</p>
+			<h3>Test h3</h3>
+			<p>
+				Test p lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
+				obcaecati iusto eum libero accusamus nam quisquam dicta nisi iure
+				aperiam magni earum ea dolor, cumque architecto corporis <code
+					>corrupti</code
+				> itaque illo!
+			</p>
+			<h4>Test h4</h4>
+			<p>
+				Test p lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
+				obcaecati iusto eum libero accusamus nam quisquam dicta nisi iure
+				aperiam magni earum ea dolor, cumque architecto corporis <code
+					>corrupti</code
+				> itaque illo!
+			</p>
+			<h5>Test h5</h5>
+			<p>
+				Test p lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
+				obcaecati iusto eum libero accusamus nam quisquam dicta nisi iure
+				aperiam magni earum ea dolor, cumque architecto corporis <code
+					>corrupti</code
+				> itaque illo!
+			</p>
+			<h6>Test h6</h6>
+			<p>
+				Test p lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
+				obcaecati iusto eum libero accusamus nam quisquam dicta nisi iure
+				aperiam magni earum ea dolor, cumque architecto corporis <code
+					>corrupti</code
+				> itaque illo!
+			</p>
 
-	<pre>
-		<code>
+			<pre>
+			<code>
 {`function fibonacci(n) {
 	if (n <= 1) return n;
 	return fibonacci(n - 1) + fibonacci(n - 2);
-}
+	}
 
-// Generate the first 10 Fibonacci numbers
-for (let i = 0; i < 10; i++) {
-	console.log(fibonacci(i));
+	// Generate the first 10 Fibonacci numbers
+	for (let i = 0; i < 10; i++) {
+		console.log(fibonacci(i));
 }`}
 	</code>
 </pre>
+		</section>
+		<section>
+			<small>Test small with <code>code</code></small>
+		</section>
+		<section>
+			<div class="note">
+				Test note with <code>code</code> and <a href="#">link</a> and more text to
+				see how it looks like.
+			</div>
+		</section>
+	</article>
 </Layout>

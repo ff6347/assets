@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/ff6347/assets/compare/v2.0.0...v2.0.1) (2024-10-03)
+
+
+### Bug Fixes
+
+* margin on pre an p ([f3afa52](https://github.com/ff6347/assets/commit/f3afa52f55502b490cccd35203f2a7a59261ee1a))
+
 # [2.0.0](https://github.com/ff6347/assets/compare/v1.0.0...v2.0.0) (2024-10-03)
 
 

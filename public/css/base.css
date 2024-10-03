@@ -13,6 +13,7 @@ https://assets.qawsed.site/css/reset.css
 
 	--background-color: var(--baby-powder);
 	--text-color: var(--smoky-black);
+	--text-color-light: hsl(from var(--text-color) h 0 99);
 	--dark-color: var(--jet);
 	--light-color: var(--baby-powder);
 	--highlight-color: var(--cyclamen);

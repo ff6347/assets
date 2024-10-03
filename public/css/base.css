@@ -167,6 +167,29 @@ h6 {
 	top: calc(var(--s2) * -1);
 }
 
+ul {
+	list-style-type: square;
+}
+
+li:has(> ul) {
+	/* Remove bullet from li elements that contain a ul */
+	list-style-type: none;
+	padding-top: var(--s1);
+}
+
+ul ul {
+	list-style-type: square;
+}
+
+ul,
+ol {
+	padding-left: var(--s2);
+	line-height: 1.5;
+}
+li:last-child {
+	padding-bottom: var(--s2);
+}
+
 @media (min-width: 768px) {
 	html {
 		font-size: 120%;

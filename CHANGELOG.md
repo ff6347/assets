@@ -1,3 +1,18 @@
+# [2.0.0-beta.1](https://github.com/ff6347/assets/compare/v1.0.0...v2.0.0-beta.1) (2024-10-03)
+
+
+### Features
+
+* Redesign base.css ([23de210](https://github.com/ff6347/assets/commit/23de2104ef509da1e3e3ae0497906630f3d0e979))
+
+
+### BREAKING CHANGES
+
+* - Adds paddings and margins
+- Adds color schema
+- Adds max width and margin
+- Adds note class
+
 # 1.0.0 (2024-10-03)
 
 

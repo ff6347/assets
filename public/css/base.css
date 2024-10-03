@@ -158,7 +158,7 @@ h6 {
 
 .note::before {
 	color: var(--light-color);
-	border-radius: 4px;
+
 	position: absolute;
 	content: "Note";
 	font-weight: 600;

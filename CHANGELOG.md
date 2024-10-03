@@ -1,3 +1,60 @@
+# [2.0.0](https://github.com/ff6347/assets/compare/v1.0.0...v2.0.0) (2024-10-03)
+
+
+### Features
+
+* Redesign base.css ([#7](https://github.com/ff6347/assets/issues/7)) ([1a42804](https://github.com/ff6347/assets/commit/1a42804aab689a1c6ccadad220a7124c0fdf5bc0))
+
+
+### BREAKING CHANGES
+
+* - Adds paddings and margins
+- Adds color schema
+- Adds max width and margin
+- Adds note class
+
+* chore(release): 2.0.0-beta.1 [skip ci]
+
+# [2.0.0-beta.1](https://github.com/ff6347/assets/compare/v1.0.0...v2.0.0-beta.1) (2024-10-03)
+
+### Features
+
+* Redesign base.css ([23de210](https://github.com/ff6347/assets/commit/23de2104ef509da1e3e3ae0497906630f3d0e979))
+
+### BREAKING CHANGES
+
+* - Adds paddings and margins
+- Adds color schema
+- Adds max width and margin
+- Adds note class
+
+* feat: light text color
+
+* feat: list indent and style
+
+* test: Color overview and list handling
+
+* chore(release): 2.0.0-beta.2 [skip ci]
+
+# [2.0.0-beta.2](https://github.com/ff6347/assets/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2024-10-03)
+
+### Features
+
+* light text color ([22803c3](https://github.com/ff6347/assets/commit/22803c328364b18671a586700c77b693b0357808))
+* list indent and style ([521625e](https://github.com/ff6347/assets/commit/521625edbd7537f9057fd6de6f5474a24c235e6a))
+
+* chore: Add color theme info in meta tag
+
+* feat: Dog fooding
+
+* chore(release): 2.0.0-beta.3 [skip ci]
+
+# [2.0.0-beta.3](https://github.com/ff6347/assets/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2024-10-03)
+
+### Features
+
+* Dog fooding ([c077dd5](https://github.com/ff6347/assets/commit/c077dd50710bd2510636423fd15cb481da37f9d3))
+
 # [2.0.0-beta.3](https://github.com/ff6347/assets/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2024-10-03)
 
 

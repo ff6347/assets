@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/ff6347/assets/compare/v2.0.1...v2.0.2) (2024-10-03)
+
+
+### Bug Fixes
+
+* make note not rounded ([6567140](https://github.com/ff6347/assets/commit/6567140536c159011177f9f5b4373df74f74fc35))
+
 ## [2.0.1](https://github.com/ff6347/assets/compare/v2.0.0...v2.0.1) (2024-10-03)
 
 

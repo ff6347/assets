@@ -33,7 +33,7 @@ const cssInfos: ImageInfo[] = cssFiles.map((file: string) => {
 
 <style>
 	body {
-		height: 100svh;
+		/* height: 100svh; */
 	}
 	main {
 		margin: 0 auto;
@@ -41,11 +41,9 @@ const cssInfos: ImageInfo[] = cssFiles.map((file: string) => {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex-direction: column;
 	}
-	h1,
-	h2 {
-		margin-top: 2rem;
-	}
+
 	.images {
 		/* margin: 1rem; */
 		display: grid;
@@ -56,7 +54,7 @@ const cssInfos: ImageInfo[] = cssFiles.map((file: string) => {
 	}
 	.csss {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(95svw, 1fr));
 		gap: 1rem;
 		align-items: end;
 	}
@@ -109,23 +107,23 @@ const cssInfos: ImageInfo[] = cssFiles.map((file: string) => {
 	}
 	@media screen and (min-width: 400px) {
 		main {
-			/* margin: 0 auto; */
-			/* max-width: 100%; */
 			display: inherit;
 		}
-		.images {
+		.images,
+		.csss {
 			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		}
 	}
-	@media screen and (min-width: 800px) {
-		.images {
+	@media screen and (min-width: 815px) {
+		.images,
+		.csss {
 			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 			grid-template-columns: 1fr 1fr 1fr;
 		}
+
 		main {
 			max-width: 70svw;
 			height: 100%;
-			/* display: flex; */
 		}
 	}
 </style>

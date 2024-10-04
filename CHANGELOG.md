@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/ff6347/assets/compare/v2.0.2...v2.0.3) (2024-10-04)
+
+
+### Bug Fixes
+
+* Mobile overview ([#9](https://github.com/ff6347/assets/issues/9)) ([07f9564](https://github.com/ff6347/assets/commit/07f95647de1f3c38f9bf1782834c0c8d2e1c4cc1))
+
 ## [2.0.2](https://github.com/ff6347/assets/compare/v2.0.1...v2.0.2) (2024-10-03)
 
 

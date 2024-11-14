@@ -1,3 +1,16 @@
+# [2.1.0](https://github.com/ff6347/assets/compare/v2.0.4...v2.1.0) (2024-11-14)
+
+
+### Bug Fixes
+
+* Mobile overview ([253fbf3](https://github.com/ff6347/assets/commit/253fbf3ed1909de52c3b4380a59fc7c72a0dd939))
+* Remove yellow from bg ([55d2a6f](https://github.com/ff6347/assets/commit/55d2a6f9b1fd9efba6e77ba8a2fe0ae721a86e6a))
+
+
+### Features
+
+* layers and text rendering settings ([0b447cc](https://github.com/ff6347/assets/commit/0b447ccc4a07c26e3761ace5043e2b30ff46d142))
+
 ## [2.0.4](https://github.com/ff6347/assets/compare/v2.0.3...v2.0.4) (2024-11-14)
 
 
